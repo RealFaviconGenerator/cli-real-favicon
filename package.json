@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/RealFaviconGenerator/cli-real-favicon#readme",
   "bin": {
-    "real-favicon-generate": "index.js"
+    "real-favicon": "index.js"
   },
   "dependencies": {
     "async": "^1.5.0",
