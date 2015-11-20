@@ -1,3 +1,7 @@
+#! /usr/bin/env node
+
+'use strict';
+
 var program = require('commander');
 
 var pack = require('./package.json');
