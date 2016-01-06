@@ -9,6 +9,7 @@ var rfg = require('rfg-api').init();
 var path = require('path');
 var Promise = require('bluebird');
 var fs = Promise.promisifyAll(require('fs'));
+var glob = require('glob');
 
 var args = program
   .version(pack.version)
@@ -22,7 +23,14 @@ var markups = fs.readFileAsync(args[0]).then(function(data){
   return(JSON.parse(data).favicon.html_code);
 });
 
-var fileContents = Promise.resolve(htmlFiles).map(function(htmlFile) {
+Promise.resolve(htmlFiles).map(function(pattern){
+  return(Promise.fromCallback(function (callback) {
+    glob(pattern, callback);
+  }));
+}).then(function(fileArrays){
+  // Flatten array
+  return([].concat.apply([], fileArrays));
+}).map(function(htmlFile) {
   return Promise.join(fs.readFileAsync(htmlFile), markups, function(content, markups) {
     return(Promise.fromCallback(function (callback) {
       rfg.injectFaviconMarkups(content, markups, null, callback);

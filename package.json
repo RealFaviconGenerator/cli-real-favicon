@@ -6,7 +6,7 @@
     "test": "mocha",
     "example": "npm run example:generate && npm run example:inject",
     "example:generate": "node ./real-favicon.js generate example/faviconDescription.json example/faviconData.json example/out",
-    "example:inject": "node ./real-favicon.js inject example/faviconData.json example/out example/test.html"
+    "example:inject": "node ./real-favicon.js inject example/faviconData.json example/out example/*.html"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   "dependencies": {
     "bluebird": "3.*",
     "commander": "^2.9.0",
+    "glob": "6.*",
     "rfg-api": "^0.1.3"
   }
 }
