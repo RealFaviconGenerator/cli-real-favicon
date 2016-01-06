@@ -1,0 +1,33 @@
+{
+  "masterPicture": "example/favicon.png",
+  "iconsPath": "/",
+  "design": {
+    "ios": {
+      "pictureAspect": "noChange"
+    },
+    "desktopBrowser": {},
+    "windows": {
+      "pictureAspect": "noChange",
+      "backgroundColor": "#da532c",
+      "onConflict": "override"
+    },
+    "androidChrome": {
+      "pictureAspect": "noChange",
+      "themeColor": "#ffffff",
+      "manifest": {
+        "name": "TestApp",
+        "display": "browser",
+        "orientation": "notSet",
+        "onConflict": "override"
+      }
+    },
+    "safariPinnedTab": {
+      "pictureAspect": "silhouette",
+      "themeColor": "#5bbad5"
+    }
+  },
+  "settings": {
+    "scalingAlgorithm": "Mitchell",
+    "errorOnImageTooSmall": false
+  }
+}
