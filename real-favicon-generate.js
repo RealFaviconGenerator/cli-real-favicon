@@ -23,7 +23,7 @@ fs.readFile(args[0], function(err, data) {
   var opts = {
     apiKey: API_KEY,
     masterPicture: favicon.masterPicture,
-    iconPath: favicon.iconsPath,
+    iconsPath: favicon.iconsPath,
     design: favicon.design,
     settings: favicon.settings,
     versioning: favicon.versioning
