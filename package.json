@@ -1,6 +1,6 @@
 {
   "name": "cli-real-favicon",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Node.js CLI for RealFaviconGenerator",
   "scripts": {
     "test": "mocha",
