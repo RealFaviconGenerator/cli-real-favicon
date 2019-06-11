@@ -28,9 +28,9 @@
     "real-favicon": "real-favicon.js"
   },
   "dependencies": {
-    "bluebird": "3.*",
-    "commander": "^2.9.0",
-    "glob": "6.*",
-    "rfg-api": "^0.4.0"
+    "bluebird": "^3.5.5",
+    "commander": "^2.20.0",
+    "glob": "^6.0.4",
+    "rfg-api": "^0.5.0"
   }
 }
